@@ -115,7 +115,7 @@ h1 {
                 </h2>
                 <div class="wrapper">
                   <section id="section1" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section2" class="arrow__btn text-6xl page">‹</a>
+                          <a href="#section2" class="arrow__btn text-6xl page">‹</a>
                       {% for filme in lista_filmes_recentes %}
                       {% if forloop.counter < 5 %}
                       <div class="item h-64 w-1/4 m-4">
@@ -129,7 +129,7 @@ h1 {
                   </section>
                     {% if lista_filmes_recentes|length > 4 %}
                       <section id="section2" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section1" class="arrow__btn text-6xl">‹</a>
+                              <a href="#section1" class="arrow__btn text-6xl">‹</a>
                           {% for filme in lista_filmes_recentes %}
                           {% if forloop.counter > 4 %}
                           <div class="item h-64 w-1/4 m-4">
@@ -155,7 +155,7 @@ h1 {
                 </h2>
                 <div class="wrapper">
                   <section id="section1emalta" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section2emalta" class="arrow__btn text-6xl page">‹</a>
+                          <a href="#section2emalta" class="arrow__btn text-6xl page">‹</a>
                       {% for filme in lista_filmes_emalta %}
                       {% if forloop.counter < 5 %}
                       <div class="item h-64 w-1/4 m-4">
@@ -169,7 +169,7 @@ h1 {
                   </section>
                     {% if lista_filmes_emalta|length > 4 %}
                       <section id="section2emalta" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section1emalta" class="arrow__btn text-6xl">‹</a>
+                              <a href="#section1emalta" class="arrow__btn text-6xl">‹</a>
                           {% for filme in lista_filmes_emalta %}
                           {% if forloop.counter > 4 %}
                           <div class="item h-64 w-1/4 m-4">
@@ -196,7 +196,7 @@ h1 {
                 </h2>
                 <div class="wrapper">
                   <section id="section1vistos" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section2vistos" class="arrow__btn text-6xl page">‹</a>
+                          <a href="#section2vistos" class="arrow__btn text-6xl page">‹</a>
                       {% for filme in request.user.filmes_vistos.all %}
                       {% if forloop.counter < 5 %}
                       <div class="item h-64 w-1/4 m-4">
@@ -210,7 +210,7 @@ h1 {
                   </section>
                     {% if request.user.filmes_vistos.all|length > 4 %}
                       <section id="section2vistos" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section1vistos" class="arrow__btn text-6xl">‹</a>
+                             <a href="#section1vistos" class="arrow__btn text-6xl">‹</a>
                           {% for filme in request.user.filmes_vistos.all %}
                           {% if forloop.counter > 4 %}
                           <div class="item h-64 w-1/4 m-4">
