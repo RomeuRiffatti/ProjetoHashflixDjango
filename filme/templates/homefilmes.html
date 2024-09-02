@@ -42,7 +42,7 @@ h1 {
       padding: 0 2px;
       transition: $duration all;
 
-    .item:hover {
+    &:hover {
         margin: 0 40px;
         transform: scale(1.2);
       }
@@ -130,18 +130,16 @@ h1 {
                     {% if lista_filmes_recentes|length > 4 %}
                       <section id="section2" class="flex flex-nowrap items-center justify-center">
                         <a href="#section1" class="arrow__btn text-6xl">‹</a>
-                          <div>
-                            {% for filme in lista_filmes_recentes %}
-                            {% if forloop.counter > 4 %}
-                            <div class="item h-64 w-1/4 m-4">
-                                <a href="{% url 'filme:detalhesfilme' filme.pk %}">
-                                  <img src="{{ filme.thumb.url }}" class="rounded-md w-full h-full object-cover">
-                                </a>
-                            </div>
-                            {% endif %}
-                            {% endfor %}
-                                                    <a href="#section1" class="arrow__btn text-6xl">›</a>
+                          {% for filme in lista_filmes_recentes %}
+                          {% if forloop.counter > 4 %}
+                          <div class="item h-64 w-1/4 m-4">
+                              <a href="{% url 'filme:detalhesfilme' filme.pk %}">
+                                <img src="{{ filme.thumb.url }}" class="rounded-md w-full h-full object-cover">
+                              </a>
                           </div>
+                          {% endif %}
+                          {% endfor %}
+                        <a href="#section1" class="arrow__btn text-6xl">›</a>
                       </section>
                     {% endif %}
                 </div>
