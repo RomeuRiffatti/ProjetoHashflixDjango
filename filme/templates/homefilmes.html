@@ -226,23 +226,5 @@ h1 {
 
             </div>
         </section>
-        <div data-hs-carousel='{
-          "loadingClasses": "opacity-0"
-        }' class="relative">
-        <div class="hs-carousel relative overflow-hidden w-full min-h-96 bg-white rounded-lg">
-          <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-            {% for filme in lista_filmes_recentes %}
-            {% if forloop.counter > 4 %}
-            <div class="hs-carousel-slide">
-              <div class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900">              
-                <a href="{% url 'filme:detalhesfilme' filme.pk %}">
-                  <img id='imagem' src="{{ filme.thumb.url }}" class="rounded-md w-full h-full object-cover">
-                </a>
-              </div>
-            </div>      
-            {% endif %}
-            {% endfor %}
-        
-    </main>
 
 {% endblock %}
